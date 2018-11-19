@@ -1,0 +1,79 @@
+---
+title: "R Functions"
+output: github_document
+author: Charles Lam
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(bio3d)
+```
+
+## Improving analysis code by writing functions
+
+A. We will improve the following code using functions.
+```{r}
+# A. Can you improve this analysis code?
+#df <- data.frame(a=1:10, b=seq(200,400,length=10),c=11:20,d=NA)
+#df$a <- (df$a - min(df$a)) / (max(df$a) - min(df$a))
+#df$b <- (df$b - min(df$a)) / (max(df$b) - min(df$b))
+#df$c <- (df$c - min(df$c)) / (max(df$c) - min(df$c))
+#df$d <- (df$d - min(df$d)) / (max(df$a) - min(df$d))
+ 
+```
+
+A. The simplified code is below
+```{r}
+df <- data.frame(a=1:10, b=seq(200,400,length=10),c=11:20,d=NA)
+
+# simplified function
+df_simple <- function(x) {
+  (x - min(x)) / (max(x) - min(x))
+}
+
+# simplified answers
+df_simple(df$a)
+df_simple(df$b)
+df_simple(df$c)
+df_simple(df$d)
+```
+
+B. Next improve the below example code for the analysis of protein drug interactions by abstracting the main activities in your own new function. Then answer questions 1 to 6 below.
+```{r}
+# Can you improve this analysis code?
+# s1 <- read.pdb("4AKE")  # kinase with drug
+# s2 <- read.pdb("1AKE")  # kinase no drug
+# s3 <- read.pdb("1E4Y")  # kinase with drug
+# s1.chainA <- trim.pdb(s1, chain="A", elety="CA")
+# s2.chainA <- trim.pdb(s2, chain="A", elety="CA")
+# s3.chainA <- trim.pdb(s1, chain="A", elety="CA")
+# s1.b <- s1.chainA$atom$b
+# s2.b <- s2.chainA$atom$b
+# s3.b <- s3.chainA$atom$b
+# plotb3(s1.b, sse=s1.chainA, typ="l", ylab="Bfactor")
+# plotb3(s2.b, sse=s2.chainA, typ="l", ylab="Bfactor")
+# plotb3(s3.b, sse=s3.chainA, typ="l", ylab="Bfactor")
+```
+
+B. The simplified function is as follows.
+```{r}
+#simplified function
+protein_reader <- function(x) {
+  read_file <- read.pdb(x)
+  trim_read <- trim.pdb(read_file, chain="A", elety="CA")
+  spec_prot <- trim_read$atom$b
+  plot_prot <- plotb3(spec_prot, sse=trim_read, typ="l", ylab="Bfactor")
+}
+
+# simplified answers
+protein_reader("4AKE") #kinase with drug
+protein_reader("1AKE") #kinase no drug
+protein_reader("1E4Y") #kianse with drug
+```
+
+## Q1: What does the `read.pdb()` function do?
+The `read.pdb()` function reads the protein file taken from the Protein Data Bank (PDB).
+
+## Q2: What does the `trim.pdb()` function do?
+The `trim.pdb()` function takes the PDB file and converts it into a smaller PDB object with a particular subset of atoms.
+
