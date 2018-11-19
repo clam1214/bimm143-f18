@@ -1,0 +1,36 @@
+]0;~/Desktop/bimm143_fall18-master/class11[?1034hCharless-MacBook-Pro-2:class11 CharlesLam$ [KCharless-MacBook-Pro-2:class11 CharlesLam$ tar ~xf[Kvf `[K~D[K/Dowl[Knloads/musche[K[Kle.[K3.8.31_i86darwn[Kin32.[K[K[K64.t ar
+Usage:
+  List:    tar -tf <archive-filename>
+  Extract: tar -xf <archive-filename>
+  Create:  tar -cf <archive-filename> [filenames...]
+  Help:    tar --help
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ tar ~xvf ~/Downloads/muscle3.8.31_i86darwin64.t ar x n[Kmuscke[Kle[K[K[K[Kcle2[K3.[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmc muscle3.8.31_i86darwin64 /usr/local/bin/musc le
+bash: mc: command not found
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ mc muscle3.8.31_i86darwin64 /usr/local/bin/musc le[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvc muscle3.8.31_i86darwin64 /usr/local/bin/muscle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C muscle3.8.31_i86darwin64 /usr/local/bin/muscl[1Pe[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+mv: rename muscle3.8.31_i86darwin64 to /usr/local/bin/muscle: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ whic muscle
+bash: whic: command not found
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ which musce[Kle
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ ls
+1hsg.pdb	class11.Rproj	test.Rmd	test.md
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$  mv muscle3.8.31_i86darwin64 /usr/local/bin/mus cle
+mv: rename muscle3.8.31_i86darwin64 to /usr/local/bin/muscle: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ sudo  mv muscle3.8.31_i86darwin64 /usr/local/bi n/muscle
+Password:
+Sorry, try again.
+Password:
+mv: rename muscle3.8.31_i86darwin64 to /usr/local/bin/muscle: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ sudo mv muscle3.8.31_i86darwin64 /usr/local/bin /muscle
+mv: rename muscle3.8.31_i86darwin64 to /usr/local/bin/muscle: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$  mv muscle3.8.31_i86darwin64 /usr/local/bin/mus cle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C. /usr/local/bin/muscle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct /usr/local/bin/muscle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca /usr/local/bin/muscle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr /usr/local/bin/muscle[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+mv: rename muscle3.8.31_i86darwin64.tar to /usr/local/bin/muscle: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ tar ~xvf ~/Downloads/muscle3.8.31_i86darwin64.t ar[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-~xvf ~/Downloads/muscle3.8.31_i86darwin64.tar[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cxvf ~/Downloads/muscle3.8.31_i86darwin64.ta[1Pr[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+x muscle3.8.31_i86darwin64
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ sudo tar ~xvf ~/Downloads/muscle3.8.31_i86darwi n64.tar[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmv muscle3.8.31_i3[K86darwin.[K64 /usr/local/bin /musl[Kcle
+Password:
+]0;~/Desktop/bimm143_fall18-master/class11Charless-MacBook-Pro-2:class11 CharlesLam$ 

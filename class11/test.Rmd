@@ -1,0 +1,146 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## PDB database comp stats
+
+Download PDB stats data as CSV file and 
+
+```{r}
+pdbstats <- read.csv("~/Desktop/bimm143_fall18-master/Data Export Summary.csv")
+```
+
+## Data Table
+
+Lets look at the table
+```{r}
+library(knitr)
+kable(pdbstats)
+```
+
+## Q1
+```{r}
+# total number of entries
+nstru <- sum(pdbstats$Total)
+
+precent <- round((pdbstats$Total / nstru)*100, 2)
+```
+
+A1: There are `r precent[1]` % X-ray structures and `r precent[2]` % EM structures solved.
+
+```{r}
+nstats <- pdbstats
+nstats$Precent <- precent
+kable(nstats)
+```
+
+```{r}
+round((sum(nstats$Proteins) / nstru)*100, 2)
+```
+
+## intro to bio3d
+
+Any time we want to use a package we must load it with the **library()** function.
+```{r}
+library(bio3d)
+```
+
+```{r}
+pdb <- read.pdb("1hsg")
+pdb
+```
+
+```{r}
+attributes(pdb)
+```
+```{r}
+head(pdb$atom)
+
+# Print a subset of $atom data for the first two atoms
+pdb$atom[1:2, c("eleno", "elety", "x","y","z")]
+
+# Note that individual $atom records can also be accessed like this
+pdb$atom$elety[1:2]
+
+# Which allows us to do the following
+plot.bio3d(pdb$atom$b[pdb$calpha], sse=pdb, typ="l", ylab="B-factor")
+```
+```{r}
+# Print a summary of the coordinate data in $xyz
+pdb$xyz
+
+# Examine the row and column dimensions
+dim(pdb$xyz)
+
+# Print coordinates for the first two atom
+pdb$xyz[ 1, atom2xyz(1:2) ]
+
+```
+```{r}
+# Select all C-alpha atoms (return their indices)
+ca.inds <- atom.select(pdb, "calpha")
+ca.inds
+
+# Print details of the first few selected atoms
+head( pdb$atom[ca.inds$atom, ] )
+
+# And selected xyz coordinates
+head( pdb$xyz[, ca.inds$xyz] )
+
+# Select chain A
+a.inds <- atom.select(pdb, chain="A")
+
+# Select C-alphas of chain A
+ca.inds <- atom.select(pdb, "calpha", chain="A")
+
+# We can combine multiple selection criteria to return their intersection
+cab.inds <- atom.select(pdb, elety=c("CA","CB"), chain="A", resno=10:20)
+```
+
+## working with multiple pdb files
+```{r}
+# Download some example PDB files
+ids <- c("1TND_B","1AGR_A","1TAG_A","1GG2_A","1KJY_A","4G5Q_A")
+files <- get.pdb(ids, split = TRUE)
+```
+```{r}
+# Extract and align the chains we are interested in
+pdbs <- pdbaln(files, fit = TRUE)
+
+# Print to screen a summary of the 'pdbs' object
+pdbs
+```
+```{r}
+# find invariant core
+core <- core.find(pdbs)
+
+# superimpose all structures to core
+pdbs$xyz = pdbfit(pdbs, core)
+
+# Perform PCA
+pc.xray <- pca(pdbs)
+```
+```{r}
+# Calculate RMSD
+rd <- rmsd(pdbs)
+
+# Structure-based clustering
+hc.rd <- hclust(dist(rd)) 
+grps.rd <- cutree(hc.rd, k=3)
+
+plot(pc.xray, 1:2, col="grey50", bg=grps.rd, pch=21, cex=1)
+```
+
+```{r}
+# Left-click on a point to label and right-click to end
+identify(pc.xray$z[,1:2], labels=basename.pdb(pdbs$id))
+
+# Visualize first principal component
+pc1 <- mktrj(pc.xray, pc=1, file="pc_1.pdb")
+```
+

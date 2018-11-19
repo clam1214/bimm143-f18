@@ -1,0 +1,5 @@
+"0","# Left-click on a point to label and right-click to end"
+"0","identify(pc.xray$z[,1:2], labels=basename.pdb(pdbs$id))"
+"2","Error in identify.default(pc.xray$z[, 1:2], labels = basename.pdb(pdbs$id)) : 
+  plot.new has not been called yet
+"

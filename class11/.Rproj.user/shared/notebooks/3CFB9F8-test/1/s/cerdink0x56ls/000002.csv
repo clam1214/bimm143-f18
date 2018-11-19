@@ -1,0 +1,49 @@
+"0","# Download some example PDB files"
+"0","ids <- c(""1TND_B"",""1AGR_A"",""1TAG_A"",""1GG2_A"",""1KJY_A"",""4G5Q_A"")"
+"0","files <- get.pdb(ids, split = TRUE)"
+"2","trying URL 'https://files.rcsb.org/download/1TND.pdb'
+"
+"2","downloaded 745 KB
+
+"
+"2","trying URL 'https://files.rcsb.org/download/1AGR.pdb'
+"
+"2","downloaded 687 KB
+
+"
+"2","trying URL 'https://files.rcsb.org/download/1TAG.pdb'
+"
+"2","downloaded 264 KB
+
+"
+"2","trying URL 'https://files.rcsb.org/download/1GG2.pdb'
+"
+"2","downloaded 534 KB
+
+"
+"2","trying URL 'https://files.rcsb.org/download/1KJY.pdb'
+"
+"2","downloaded 540 KB
+
+"
+"2","trying URL 'https://files.rcsb.org/download/4G5Q.pdb'
+"
+"2","downloaded 989 KB
+
+"
+"1","  |                                                                          "
+"1","  |                                                                    |   0%"
+"1","  |                                                                          "
+"1","  |===========                                                         |  17%"
+"1","  |                                                                          "
+"1","  |=======================                                             |  33%"
+"1","  |                                                                          "
+"1","  |==================================                                  |  50%"
+"1","  |                                                                          "
+"1","  |=============================================                       |  67%"
+"1","  |                                                                          "
+"1","  |=========================================================           |  83%"
+"1","  |                                                                          "
+"1","  |====================================================================| 100%"
+"1","
+"

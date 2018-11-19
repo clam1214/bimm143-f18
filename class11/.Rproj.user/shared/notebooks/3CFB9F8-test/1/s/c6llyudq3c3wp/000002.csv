@@ -1,0 +1,3 @@
+"0","# total number of entries"
+"0","nstru <- sum(pdbstats$Total)"
+"0","precent <- round((pdbstats$Total / nstru)*100, 2)"

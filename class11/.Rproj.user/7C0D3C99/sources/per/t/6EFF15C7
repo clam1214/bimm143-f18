@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541527461964.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6EFF15C7",
+    "lastKnownWriteTime" : 2314885530279477254,
+    "last_content_update" : 1541527461964,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E0F789C0",
+        "caption" : "pdbstats",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=pdbstats&cache_key=E0F789C0",
+        "displayedObservations" : 5,
+        "environment" : "",
+        "object" : "pdbstats",
+        "preview" : 0,
+        "totalObservations" : 5,
+        "variables" : 6
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

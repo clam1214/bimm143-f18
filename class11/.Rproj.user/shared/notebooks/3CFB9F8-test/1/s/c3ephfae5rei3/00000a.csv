@@ -1,0 +1,2 @@
+"0","# Print a subset of $atom data for the first two atoms"
+"0","pdb$atom[1:2, c(""eleno"", ""elety"", ""x"",""y"",""z"")]"
