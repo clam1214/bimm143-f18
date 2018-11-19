@@ -1,0 +1,253 @@
+ls ~/1hsg[K[Ksg_protein.pdbqt 
+/Users/CharlesLam/1hsg_protein.pdbqt
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ mv ~/1hsg_protein.pdbqt  .[K[K[K[Kt .
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ls ~/Dowl[Knloads/ligand.pdbqt
+ls: /Users/CharlesLam/Downloads/ligand.pdbqt: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ls ~/1hsg_ligand.pdbqt 
+/Users/CharlesLam/1hsg_ligand.pdbqt
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ mv ~/1hsg_ligand.pdbqt .
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ~/Downloads/autodock_vina_1_1_2_mac/bin/vina -- help
+
+Input:
+  --receptor arg        rigid part of the receptor (PDBQT)
+  --flex arg            flexible side chains, if any (PDBQT)
+  --ligand arg          ligand (PDBQT)
+
+Search space (required):
+  --center_x arg        X coordinate of the center
+  --center_y arg        Y coordinate of the center
+  --center_z arg        Z coordinate of the center
+  --size_x arg          size in the X dimension (Angstroms)
+  --size_y arg          size in the Y dimension (Angstroms)
+  --size_z arg          size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg             output models (PDBQT), the default is chosen based on 
+                        the ligand file name
+  --log arg             optionally, write log file
+
+Misc (optional):
+  --cpu arg                 the number of CPUs to use (the default is to try to
+                            detect the number of CPUs or, failing that, use 1)
+  --seed arg                explicit random seed
+  --exhaustiveness arg (=8) exhaustiveness of the global search (roughly 
+                            proportional to time): 1+
+  --num_modes arg (=9)      maximum number of binding modes to generate
+  --energy_range arg (=3)   maximum energy difference between the best binding 
+                            mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg          the above options can be put here
+
+Information (optional):
+  --help                display usage summary
+  --help_advanced       display usage summary with advanced options
+  --version             display program version
+
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ~/Downloads/autodock_vina_1_1_2_mac/bin/vina -- config config.txt --log
+Command line parse error: required parameter is missing in 'log'
+
+Correct usage:
+
+Input:
+  --receptor arg        rigid part of the receptor (PDBQT)
+  --flex arg            flexible side chains, if any (PDBQT)
+  --ligand arg          ligand (PDBQT)
+
+Search space (required):
+  --center_x arg        X coordinate of the center
+  --center_y arg        Y coordinate of the center
+  --center_z arg        Z coordinate of the center
+  --size_x arg          size in the X dimension (Angstroms)
+  --size_y arg          size in the Y dimension (Angstroms)
+  --size_z arg          size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg             output models (PDBQT), the default is chosen based on 
+                        the ligand file name
+  --log arg             optionally, write log file
+
+Misc (optional):
+  --cpu arg                 the number of CPUs to use (the default is to try to
+                            detect the number of CPUs or, failing that, use 1)
+  --seed arg                explicit random seed
+  --exhaustiveness arg (=8) exhaustiveness of the global search (roughly 
+                            proportional to time): 1+
+  --num_modes arg (=9)      maximum number of binding modes to generate
+  --energy_range arg (=3)   maximum energy difference between the best binding 
+                            mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg          the above options can be put here
+
+Information (optional):
+  --help                display usage summary
+  --help_advanced       display usage summary with advanced options
+  --version             display program version
+
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ log.txt
+bash: log.txt: command not found
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ~/Downloads/autodock_vina_1_1_2_mac/bin/vina -- config config.txt --log
+Command line parse error: required parameter is missing in 'log'
+
+Correct usage:
+
+Input:
+  --receptor arg        rigid part of the receptor (PDBQT)
+  --flex arg            flexible side chains, if any (PDBQT)
+  --ligand arg          ligand (PDBQT)
+
+Search space (required):
+  --center_x arg        X coordinate of the center
+  --center_y arg        Y coordinate of the center
+  --center_z arg        Z coordinate of the center
+  --size_x arg          size in the X dimension (Angstroms)
+  --size_y arg          size in the Y dimension (Angstroms)
+  --size_z arg          size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg             output models (PDBQT), the default is chosen based on 
+                        the ligand file name
+  --log arg             optionally, write log file
+
+Misc (optional):
+  --cpu arg                 the number of CPUs to use (the default is to try to
+                            detect the number of CPUs or, failing that, use 1)
+  --seed arg                explicit random seed
+  --exhaustiveness arg (=8) exhaustiveness of the global search (roughly 
+                            proportional to time): 1+
+  --num_modes arg (=9)      maximum number of binding modes to generate
+  --energy_range arg (=3)   maximum energy difference between the best binding 
+                            mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg          the above options can be put here
+
+Information (optional):
+  --help                display usage summary
+  --help_advanced       display usage summary with advanced options
+  --version             display program version
+
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ log.txt
+bash: log.txt: command not found
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ~/Downloads/autodock_vina_1_1_2_mac/bin/vina -- config config.txt --log
+Command line parse error: required parameter is missing in 'log'
+
+Correct usage:
+
+Input:
+  --receptor arg        rigid part of the receptor (PDBQT)
+  --flex arg            flexible side chains, if any (PDBQT)
+  --ligand arg          ligand (PDBQT)
+
+Search space (required):
+  --center_x arg        X coordinate of the center
+  --center_y arg        Y coordinate of the center
+  --center_z arg        Z coordinate of the center
+  --size_x arg          size in the X dimension (Angstroms)
+  --size_y arg          size in the Y dimension (Angstroms)
+  --size_z arg          size in the Z dimension (Angstroms)
+
+Output (optional):
+  --out arg             output models (PDBQT), the default is chosen based on 
+                        the ligand file name
+  --log arg             optionally, write log file
+
+Misc (optional):
+  --cpu arg                 the number of CPUs to use (the default is to try to
+                            detect the number of CPUs or, failing that, use 1)
+  --seed arg                explicit random seed
+  --exhaustiveness arg (=8) exhaustiveness of the global search (roughly 
+                            proportional to time): 1+
+  --num_modes arg (=9)      maximum number of binding modes to generate
+  --energy_range arg (=3)   maximum energy difference between the best binding 
+                            mode and the worst one displayed (kcal/mol)
+
+Configuration file (optional):
+  --config arg          the above options can be put here
+
+Information (optional):
+  --help                display usage summary
+  --help_advanced       display usage summary with advanced options
+  --version             display program version
+
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ log.txt~/Downloads/autodock_vina_1_1_2_mac/bin/ vina --config config.txt --log
+bash: log.txt~/Downloads/autodock_vina_1_1_2_mac/bin/vina: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ log.txt[K[K[K[K[K[K[K~/Downloads/autodock_vina_1_1_2_mac/bin/vina =[K-- config config/tx[K[K[K.txt =[K--log log.txt
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Detected 4 CPUs
+Reading input ... 
+
+Error: could not open "ligand.pdbqt" for reading.
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ l[Kmv ~`[K/lig[K[K[Kligand.pdbqt
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ mv ~/ligant.d[Kpdbqt .
+mv: rename /Users/CharlesLam/ligant.pdbqt to ./ligant.pdbqt: No such file or directory
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ mv ~.[K/ligand.pdbqt .
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ 
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ ~/Downloads/autodock_vina_1_1_2_mac/bin/vina -- config config.txt --log log.txt
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, Journal of Computational Chemistry 31 (2010)  #
+# 455-461                                                       #
+#                                                               #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see http://vina.scripps.edu for more information.      #
+#################################################################
+
+Detected 4 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 2009
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1        -10.6      0.000      0.000
+   2        -10.1      1.434      4.415
+   3        -10.0      2.050     10.193
+   4         -9.7      2.402     10.767
+   5         -9.5      2.102      9.946
+   6         -9.3      2.177      5.034
+   7         -9.2      2.646     10.909
+   8         -8.9      3.909     10.909
+   9         -8.8      1.690      4.495
+  10         -8.8      1.851      2.858
+  11         -8.7      2.914     10.937
+  12         -8.7      3.211     11.459
+  13         -8.6      4.304      8.283
+  14         -8.6      4.523      9.068
+  15         -8.5      3.157     11.168
+  16         -8.4      2.544     10.946
+  17         -8.4      3.682     11.200
+  18         -8.3      3.904     12.049
+  19         -8.1      4.526      9.009
+  20         -8.0      6.721     11.806
+Writing output ... done.
+]0;~/Desktop/bimm143_fall18-master/class13Charless-MacBook-Pro-2:class13 CharlesLam$ [KCharless-MacBook-Pro-2:class13 CharlesLam$ [KCharless-MacBook-Pro-2:class13 CharlesLam$ 

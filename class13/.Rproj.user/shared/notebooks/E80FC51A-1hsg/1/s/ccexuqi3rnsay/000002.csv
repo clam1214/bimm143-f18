@@ -1,0 +1,22 @@
+"0","res <- read.pdb(""all.pdbqt"", multi=TRUE)"
+"0","res"
+"1","
+ Call:  "
+"1","read.pdb(file = ""all.pdbqt"", multi = TRUE)"
+"1","
+"
+"1","
+   Total Models#: 20
+     Total Atoms#: 45,  XYZs#: 2700  Chains#: 1  (values: B)
+
+     Protein Atoms#: 0  (residues/Calpha atoms#: 0)
+     Nucleic acid Atoms#: 0  (residues/phosphate atoms#: 0)
+
+     Non-protein/nucleic Atoms#: 45  (residues: 1)
+     Non-protein/nucleic resid values: [ MK1 (1) ]
+
+"
+"1","+ attr: atom, xyz, calpha, call"
+"1","
+"
+"0","write.pdb(res, ""results.pdb"")"

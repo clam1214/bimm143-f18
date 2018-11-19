@@ -1,0 +1,19 @@
+"0","pdb <- read.pdb(""1HEL"")"
+"1","  Note: Accessing on-line PDB file
+"
+"0","modes <- nma(pdb)"
+"1"," Building Hessian..."
+"1","		Done in"
+"1"," "
+"1","0.031"
+"1"," "
+"1","seconds.
+"
+"1"," Diagonalizing Hessian..."
+"1","	Done in"
+"1"," "
+"1","0.164"
+"1"," "
+"1","seconds.
+"
+"0","plot(modes, sse=pdb)"

@@ -1,0 +1,79 @@
+---
+title: "class13 Structural Bioinformatics"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## get HIV-Pr structure from PDB Database
+
+We will work with the structure `1HSG` 
+```{r cars}
+library(bio3d)
+
+file.name <- get.pdb("1HSG")
+```
+
+Read this into R and examine composition
+```{r}
+hiv <- read.pdb(file.name)
+
+hiv
+```
+
+## Slit into separate protein and ligand files
+
+We will use the `trim.pdb()` function to split our input structure
+```{r}
+prot <- trim.pdb(hiv, "protein")
+prot
+
+lig <-trim.pdb(hiv, "ligand")
+lig
+```
+
+We will use the `write.pdb()` function to write our structures
+```{r}
+write.pdb(prot, file="1hsg_protein.pdb")
+write.pdb(lig, file="1hsg_ligand.pdb")
+```
+
+## Inspecting our docking results with Vina
+
+We run this command:
+`~/Downloads/autodock_vina_1_1_2_mac/bin/vina --config config.txt --log log.txt
+
+We got a file `all.pdbqt` that we need to made into a PDB format
+```{r}
+res <- read.pdb("all.pdbqt", multi=TRUE)
+
+res
+
+write.pdb(res, "results.pdb")
+
+```
+
+We will use the `rmsd()` function to compare our docking results
+```{r}
+ori <- read.pdb("ligand.pdbqt")
+
+rmsd(ori, res)
+```
+
+## Normal mode analysis
+
+Normal mode analysis (NMA) is one of the major simulation techniques used to probe large- scale motions in biomolecules. Typical application is for the prediction of functional motions in proteins.
+Normal mode analysis (NMA) of a single protein structure can be carried out by providing a PDB object to the function `nma()`. In the code below we first load the Bio3D package and then download an example structure of hen egg white lysozyme (PDB id 1HEL) with the function `read.pdb()`. Finally the function `nma()` is used perform the normal mode calculation:
+```{r}
+pdb <- read.pdb("1HEL")
+
+modes <- nma(pdb)
+
+plot(modes, sse=pdb)
+
+#visualize NMA results
+mktrj(modes, mode=7, file="nma_7.pdb")
+```
+
